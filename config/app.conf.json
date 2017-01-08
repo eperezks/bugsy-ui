@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "APP_CONFIG" : {
+      "name": "development",
+      "API_URL": "http://localhost:3000",
+      "isHttps": false
+    }
+  },
+  "test": {
+    "APP_CONFIG" : {
+      "name": "test",
+      "API_URL": "https://staging.kleermail.com",
+      "isHttps": true
+    }
+  },
+  "production": {
+    "APP_CONFIG" : {
+      "name": "production",
+      "API_URL": "https://www.eduardoperez.us",
+      "isHttps": true
+    }
+  }
+}
