@@ -22,14 +22,6 @@ function($stateProvider, $urlRouterProvider, $httpProvider) {
           return squaresFactory.getSquare($stateParams.id);
         }]
       }
-      // resolve: {
-      //   squaresPromise: ['$stateParams', 'squaresFactory',
-      //       function($stateParams, squaresFactory){return true;}]
-      // }
-      //     resolve: {
-      //   projectsPromise: ['$stateParams',
-      //   function($stateParams){return true;}]
-      // }
     });
   $urlRouterProvider.otherwise('/');
 }]);
