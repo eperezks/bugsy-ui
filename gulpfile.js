@@ -104,7 +104,8 @@ var paths = {
     'app/app.module.js',
     'app/app.routes.js',
     'app/components/**/*.js',
-    'app/assets/**/*.js'
+    'app/assets/**/*.js',
+    'app/assets/js/**/*.js'
   ]
 }
 

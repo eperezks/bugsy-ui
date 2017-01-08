@@ -7,6 +7,7 @@ var myApp = angular.module('myApp', [
   'ngAnimate',
   'foundation',
   'toastr',
-  'myApp.squares'
+  'myApp.squares',
+  'application.appConfig'
 ]);
 
