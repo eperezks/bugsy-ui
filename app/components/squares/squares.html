@@ -1,5 +1,15 @@
 <div id="squaresCtrl">
-  <div ng-repeat="g in games">
-    {{g.home}} :: {{g.away}}
+  <div id="3-col-body" class="grid-block" ng-controller="squaresCtrl">
+    <div id="middle-panel" class="grid-block vertical">
+      <div class="grid-block align-center shrink">
+        <ul class="pricing-table">
+          <div ng-repeat="g in games">
+            <li><a ui-sref="board({id: g.id})" class="full">{{g.home}} :: {{g.away}}</a></li>
+          </div>
+        </ul>
+      </div>
+]
+
+    </div>
   </div>
 </div>

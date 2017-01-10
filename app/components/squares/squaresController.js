@@ -1,7 +1,7 @@
 squaresModule
 .controller('squaresCtrl',
-    ["$scope", "$state", "$http", '$log', 'squaresFactory', 'boardFactory',
-    function($scope, $state, $http, $log, squaresFactory, boardFactory){
+    ["$scope", "$state", "$http", '$log', 'squaresFactory', 'boardFactory', 'APP_CONFIG',
+    function($scope, $state, $http, $log, squaresFactory, boardFactory, APP_CONFIG){
       $scope.log = $log;
       $scope.boxes = [];
       $scope.name="";

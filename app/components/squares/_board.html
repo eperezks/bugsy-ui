@@ -100,7 +100,6 @@
    -ms-transform: rotate(-90deg) translate(-8em, -.5em);
    transform: rotate(-90deg) translate(-8em, -.5em);
   word-wrap: normal;
-  display: inline-block;
 }
 
 .ground-zero {
@@ -112,14 +111,14 @@
 <div class="grid-block align-center shrink">
   <div class="empty-block"></div>
   <div class="team">
-    <div class="team-text">Home</div>
+    <div class="team-text">{{board.home}}</div>
   </div>
 </div>
 
 <div class="grid-block align-center board">
   <div class="grid-block shrink">
     <div class="vertical-team">
-      <div class="team-text vertical-text ">Away</div>
+      <div class="team-text vertical-text ">{{board.away}}</div>
     </div>
 
   </div>
