@@ -65,6 +65,7 @@ squaresModule
           if ($scope.isMine(x,y)) {
             $scope.boxes[x][y].name = undefined;
             $scope.boxes[x][y].selected = false;
+            $scope.board.deleteBox($scope.boxes[x][y]);
           } else {
             console.log('you dont own this bitch');
           }
@@ -72,6 +73,7 @@ squaresModule
         else {
           $scope.boxes[x][y].selected = true;
           $scope.boxes[x][y].name = $scope.name;
+          $scope.board.updateBox($scope.boxes[x][y]);
         }
         $log.debug($scope.boxes);
         this.setstyle(x,y);
@@ -102,14 +104,16 @@ squaresModule
           $scope.boxes[box.x][box.y].name = box.name;
           $scope.boxes[box.x][box.y].user_id = box.user_id;
           $scope.boxes[box.x][box.y].id = box.id;
-          $scope.boxes[box.x][box.y].selected = true;
+          if ($scope.boxes[box.x][box.y].name) {
+            $scope.boxes[box.x][box.y].selected = true;
+          }
+
           $scope.setstyle(box.x, box.y);
         }
       }
 
       if ($scope.board.hasOwnProperty('boxes')) {
         console.log('Board available painting and filling');
-        // console.log($scope.board.boxes)
         $scope.paint();
         $scope.fill($scope.board.boxes);
 
@@ -118,7 +122,3 @@ squaresModule
       }
 
     }]);
-// squaresModule
-// .factory('squaresFactory',
-//   ['$http',
-//   function($http){}]);
