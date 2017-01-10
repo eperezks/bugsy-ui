@@ -1,14 +1,20 @@
+<style type="text/css">
+  .nfl-logo {
+    width: 4em;
+  }
+</style>
 <div id="squaresCtrl">
   <div id="3-col-body" class="grid-block" ng-controller="squaresCtrl">
     <div id="middle-panel" class="grid-block vertical">
       <div class="grid-block align-center shrink">
-        <ul class="pricing-table">
+        <ul style="list-style: none">
           <div ng-repeat="g in games">
             <li>
+              <br>
               <a ui-sref="board({id: g.id})" class="full">
-                <img ng-src="./assets/nfl-icons/{{g.away}}.gif">
-                {{g.home}} @ {{g.away}}
-                <img ng-src="./assets/nfl-icons/{{g.home}}.gif">
+                <img class="nfl-logo" ng-src="./assets/images/nfl-icons/{{g.away.toLowerCase()}}.gif">
+                {{g.away}} @ {{g.home}}
+                <img class="nfl-logo" ng-src="./assets/images/nfl-icons/{{g.home.toLowerCase()}}.gif">
               </a>
             </li>
           </div>
