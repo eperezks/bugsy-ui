@@ -97,7 +97,7 @@ var paths = {
     // file upload
     // 'bower_components/ng-file-upload/ng-file-upload.min.js',
     'bower_components/angular-ui-router/release/angular-ui-router.min.js',
-    'bower_components/angular-toastr/dist/angular-toastr.tpls.js',
+    'bower_components/angular-toastr/dist/angular-toastr.tpls.js'
   ],
   // These files are for your app's JavaScript
   appJS: [

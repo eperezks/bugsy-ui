@@ -3,20 +3,13 @@
     "APP_CONFIG" : {
       "name": "development",
       "API_URL": "http://192.168.1.6:3000",
-      "isHttps": false
-    }
-  },
-  "test": {
-    "APP_CONFIG" : {
-      "name": "test",
-      "API_URL": "https://staging.kleermail.com",
       "isHttps": true
     }
   },
   "production": {
     "APP_CONFIG" : {
       "name": "production",
-      "API_URL": "https://www.eduardoperez.us",
+      "API_URL": "https://eduardoperez.us",
       "isHttps": true
     }
   }
