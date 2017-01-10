@@ -4,7 +4,13 @@
       <div class="grid-block align-center shrink">
         <ul class="pricing-table">
           <div ng-repeat="g in games">
-            <li><a ui-sref="board({id: g.id})" class="full">{{g.home}} :: {{g.away}}</a></li>
+            <li>
+              <a ui-sref="board({id: g.id})" class="full">
+                <img ng-src="./assets/nfl-icons/{{g.away}}.gif">
+                {{g.home}} @ {{g.away}}
+                <img ng-src="./assets/nfl-icons/{{g.home}}.gif">
+              </a>
+            </li>
           </div>
         </ul>
       </div>
