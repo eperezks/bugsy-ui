@@ -7,12 +7,8 @@ squaresModule
     function($http, $log, APP_CONFIG, toastr){
     var service = [];
 
-    service.putSquare = function() {
-
-    }
-
-    service.getSquare = function() {
-      var url = 'http://192.168.1.6:3000/squares/1.json';
+    service.getSquares = function() {
+      var url = APP_CONFIG.API_URL + '/squares.json';
 
       return $http({
         method: 'GET',

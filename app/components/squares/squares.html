@@ -1,17 +1,5 @@
 <div id="squaresCtrl">
-  <div id="3-col-body" class="grid-block" ng-controller="squaresCtrl">
-    <!-- <div id="left-panel" class="grid-block">
-      This is the left panel content
-    </div> -->
-    <div id="middle-panel" class="grid-block vertical">
-      <div class="grid-block align-center shrink">
-        <label>
-          <input type="text" placeholder="Enter Name" ng-model="name" ng-keyup="repaint()">
-        </label>
-      </div>
-
-      <div ng-include src="'components/squares/_board.html'"></div>
-
-    </div>
+  <div ng-repeat="g in games">
+    {{g.home}} :: {{g.away}}
   </div>
 </div>

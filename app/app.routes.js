@@ -12,16 +12,28 @@ function($stateProvider, $urlRouterProvider, $httpProvider) {
 
   $stateProvider
 
-  .state('square', {
-      url: '/',
+  .state('squares', {
+      url: '/squares',
       templateUrl: './components/squares/squares.html',
       controller: 'squaresCtrl',
       authenticate: true,
       resolve: {
         squaresPromise: ['$stateParams', 'squaresFactory', function($stateParams, squaresFactory) {
-          return squaresFactory.getSquare($stateParams.id);
+          return squaresFactory.getSquares();
+        }]
+      }
+    })
+
+  .state('board', {
+      url: '/squares/:id',
+      templateUrl: './components/squares/board.html',
+      controller: 'squaresCtrl',
+      authenticate: true,
+      resolve: {
+        squaresPromise: ['$stateParams', 'boardFactory', function($stateParams, boardFactory) {
+          return boardFactory.getBoard($stateParams.id);
         }]
       }
     });
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/squares');
 }]);
